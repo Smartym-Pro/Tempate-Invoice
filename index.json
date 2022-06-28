@@ -1,0 +1,13 @@
+{
+	"index": "index.hbs",
+	"partials": {
+		"head": "partials/head.hbs",
+		"from": "partials/from.hbs",
+		"to": "partials/to.hbs",
+		"services": "partials/services.hbs",
+    "logo": "partials/logo.hbs"
+	},
+	"css": [
+		"style.css"
+	]
+}

@@ -1,0 +1,37 @@
+{{#data.beneficiary}}
+<div class="participants">
+  <div class="participants__title">Bill To:</div>
+  <div class="participants__row">
+    {{#if name}}
+    <div>{{name}}</div>
+    {{/if}}
+    {{#if reposiblePerson}}
+    <div>{{reposiblePerson.name}}</div>
+    {{/if}}
+  </div>
+
+  {{#if address}}
+  <div class="participants__row">
+    <div>Legal address: {{address.streetAddress}} {{address.postalCode}} {{address.city}} {{address.country}}</div>
+    {{#if taxInfo}}
+    <div>Individual Tax Number: {{taxInfo}}</div>
+    {{/if}}
+  </div>
+  {{/if}}
+   
+  {{#if bankAccount}}
+  <div class="participants__row">
+    <div>Bank: {{bankAccount.name}}
+      {{#if bankAccount.Provider}}
+      {{#if bankAccount.Provider.Address}}
+      ({{bankAccount.Provider.Address.city}}, {{bankAccount.Provider.Address.country}})
+      {{/if}}
+      {{/if}}
+    </div>
+    <div>Account IBAN: {{bankAccount.IBAN}}</div>
+    <div>SWIFT code: {{bankAccount.SWIFT}}</div>
+  </div>
+  {{/if}}
+  
+</div>
+{{/data.beneficiary}}

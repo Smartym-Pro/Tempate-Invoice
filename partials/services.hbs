@@ -1,0 +1,57 @@
+{{#if data.services.length}}
+<div class="services-container">
+<div class="services__row-wrapper services__row_title-wrapper">
+  <div class="services__row">
+    <div class="services__items">
+      ITEM
+    </div>
+    <div class="services__hours">
+      HOURS
+    </div>
+    <div class="services__price">
+      PRICE
+    </div>
+  </div>
+</div>
+<div class="services__row-wrapper services__row-wrapper-main">
+  {{#each data.services}}
+  <div class="services__row">
+    <div class="services__items">
+      {{name}}
+    </div>
+    <div class="services__hours">
+      {{itemQuantity}}
+    </div>
+    <div class="services__price">
+      {{#if ../data.totalPaymentDue}}
+      <span>{{../data.totalPaymentDue.priceCurrency}}</span>
+      {{/if}}
+      {{itemTotalCost}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+<div class="services__results-wrapper">
+  <div class="services__results">
+    <div class="services__items">
+    </div>
+    <div class="services__total">
+      <div class="services__total__item">
+        <div>Discount (for bank fee)</div>
+        <div>-</div>
+      </div>
+      <div class="services__total__item">
+        <div>VAT reverse-charged</div>
+        <div>-</div>
+      </div>
+      <div class="services__total__item">
+        <div>Invoice Total</div>
+        {{#if data.totalPaymentDue}}
+        <div>{{data.totalPaymentDue.priceCurrency}}{{data.totalPaymentDue.price}}</div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+{{/if}}

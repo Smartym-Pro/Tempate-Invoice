@@ -1,0 +1,43 @@
+{{#data.customer}}
+<div class="participants">
+  <div class="participants__title">Bill From:</div>
+  <div class="participants__row">
+    {{#if name}}
+    <div>{{name}}</div>
+    {{/if}}
+    {{#if reposiblePerson}}
+    <div>Represented by {{reposiblePerson.name}}</div>
+    {{/if}}
+  </div>
+
+  {{#if address}}
+  <div class="participants__row">
+    <div>Address: {{address.streetAddress}} {{address.postalCode}} {{address.city}} {{address.country}}</div>
+  </div>
+  {{/if}}
+   
+  <div class="participants__row">
+    {{#if email}}
+    <div>E-mail: {{email}}</div>
+    {{/if}}
+    {{#if taxInfo}}
+    <div>NIP: {{taxInfo}}</div>
+    {{/if}}
+  </div>
+
+  {{#if bankAccount}}
+  <div class="participants__row">
+    <div>Bank: {{bankAccount.name}}
+      {{#if bankAccount.Provider}}
+      {{#if bankAccount.Provider.Address}}
+      ({{bankAccount.Provider.Address.city}}, {{bankAccount.Provider.Address.country}})
+      {{/if}}
+      {{/if}}
+    </div>
+    <div>IBAN: {{bankAccount.IBAN}}</div>
+    <div>SWIFT: {{bankAccount.SWIFT}}</div>
+  </div>
+  {{/if}}
+  
+</div>
+{{/data.customer}}

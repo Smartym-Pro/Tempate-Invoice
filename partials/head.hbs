@@ -1,0 +1,41 @@
+<section id="head">
+  <div class="head__wrapper">
+    <div class="head__logo-wrapper">
+      {{>logo}}
+    </div>
+    <div class="head__data">
+      <div class="head__data__item">
+        <div class="head__data__title">
+          Invoice
+        </div>
+        <div class="head__data__item__invoice">
+          {{data.invoiceId}}
+        </div>
+      </div>
+      <div class="head__data__item">
+        <div class="head__data__title">
+          To agreement
+        </div>
+        <div class="head__data__item__other">
+          {{data.toAgreement}}
+        </div>
+      </div>
+      <div class="head__data__item">
+        <div class="head__data__title">
+          Period
+        </div>
+        <div class="head__data__item__other">
+          {{data.invoicePeriod}}
+        </div>
+      </div>
+      <div class="head__data__item">
+        <div class="head__data__title">
+          Date
+        </div>
+        <div class="head__data__item__other">
+          {{data.invoiceDate}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
