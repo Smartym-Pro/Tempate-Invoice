@@ -1,4 +1,4 @@
-{{#data.customer}}
+{{#data.beneficiary}}
 <div class="participants">
   <div class="participants__title">Bill From:</div>
   <div class="participants__row">
@@ -6,25 +6,22 @@
     <div>{{name}}</div>
     {{/if}}
     {{#if reposiblePerson}}
-    <div>Represented by {{reposiblePerson.name}}</div>
+    <div>{{reposiblePerson.name}}</div>
     {{/if}}
   </div>
 
   {{#if address}}
   <div class="participants__row">
-    <div>Address: {{address.streetAddress}} {{address.postalCode}} {{address.city}} {{address.country}}</div>
-  </div>
-  {{/if}}
-   
-  <div class="participants__row">
-    {{#if email}}
-    <div>E-mail: {{email}}</div>
+    <div>Legal address: {{address.streetAddress}} {{address.postalCode}} {{address.city}} {{address.country}}</div>
+    {{#if phone}}
+    <div>Phone: {{phone}}</div>
     {{/if}}
     {{#if taxInfo}}
     <div>NIP: {{taxInfo}}</div>
     {{/if}}
   </div>
-
+  {{/if}}
+   
   {{#if bankAccount}}
   <div class="participants__row">
     <div>Bank: {{bankAccount.name}}
@@ -34,10 +31,10 @@
       {{/if}}
       {{/if}}
     </div>
-    <div>IBAN: {{bankAccount.IBAN}}</div>
-    <div>SWIFT: {{bankAccount.SWIFT}}</div>
+    <div>Account IBAN: {{bankAccount.IBAN}}</div>
+    <div>SWIFT code: {{bankAccount.SWIFT}}</div>
   </div>
   {{/if}}
   
 </div>
-{{/data.customer}}
+{{/data.beneficiary}}

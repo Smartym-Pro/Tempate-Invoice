@@ -177,6 +177,10 @@ p:empty {
   font-weight: 600;
 }
 
+.special-instructions_text {
+  padding: 0 15mm;
+}
+
 .bottom-page {
   font-size: 11pt;
   font-weight: 600;
