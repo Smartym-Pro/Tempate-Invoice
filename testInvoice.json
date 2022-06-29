@@ -1,0 +1,103 @@
+{
+    "@context": "https://schema.org/",
+    "@type": "Invoice",
+    "@invoiceType": "Hourly",
+    "invoiceId": "12343",
+    "invoiceDate": "12-14-16",
+    "invoicePeriod": "12-89",
+    "toAgreement": "fiptre",
+    "beneficiary": {
+      "@type": "Business|Person",
+      "name": "ACME Home Heating",
+      "email": "test@org",
+      "phone": "",
+      "reposiblePerson": {
+        "name": "Jane Doe",
+        "jobTitle": "Professor"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "country": "Belarus",
+        "city": "Minsk",
+        "postalCode": "98052",
+        "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+      },
+      "bankAccount": {
+        "@type": "BankAccount",
+        "IBAN": "DE41500105170123456789",
+        "SWIFT": "DE41500105170123456789",
+        "Name": "Max Mustermann",
+        "Provider": {
+          "@type": "Organization",
+          "Name": "Postbank",
+          "Address": {
+            "@type": "PostalAddress",
+            "country": "Belarus",
+            "city": "Minsk",
+            "postalCode": "98052",
+            "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+          }
+        }
+      },
+      "taxInfo": ""
+    },
+    "customer": {
+      "@type": "Business|Person",
+      "name": "ACME Home Heating",
+      "email": "test@org",
+      "phone": "",
+      "reposiblePerson": {
+        "name": "Jane Doe",
+        "jobTitle": "Professor"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "country": "Belarus",
+        "city": "Minsk",
+        "postalCode": "98052",
+        "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+      },
+      "bankAccount": {
+        "@type": "BankAccount",
+        "IBAN": "DE41500105170123456789",
+        "SWIFT": "DE41500105170123456789",
+        "Name": "Max Mustermann",
+        "Provider": {
+          "@type": "Organization",
+          "Name": "Postbank",
+          "Address": {
+            "@type": "PostalAddress",
+            "country": "Belarus",
+            "city": "Minsk",
+            "postalCode": "98052",
+            "streetAddress": "20341 Whitworth Institute 405 N. Whitworth"
+          }
+        }
+      },
+      "taxInfo": ""
+    },
+    "paymentMethod": "http://purl.org/goodrelations/v1#ByInvoice",
+    "totalPaymentDue": {
+      "@type": "PriceSpecification",
+      "price": 0.00,
+      "priceCurrency": "USD"
+    },
+    "services": [
+      {
+        "@type": "Service",
+        "name": "DEV 1",
+        "itemQuantity": 168,
+        "itemRate": 20,
+        "itemTotalCost": 20
+      },
+      {
+        "@type": "Service",
+        "description": "furnace installation",
+        "itemQuantity": 168,
+        "itemRate": 20,
+        "itemTotalCost": 20,
+        "name": "Total"
+      }
+    ],
+    "specialNoteAndInstructions": ""
+  }
