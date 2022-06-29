@@ -179,6 +179,7 @@ p:empty {
 
 .special-instructions_text {
   padding: 0 15mm;
+  padding-top: 2mm;
 }
 
 .bottom-page {
