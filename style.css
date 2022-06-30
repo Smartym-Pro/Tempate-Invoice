@@ -14,10 +14,9 @@ body {
 .page {
   width: 210mm;
   min-height: 297mm;
-  margin: 10mm auto;
+  margin: 0 auto 20mm;
   border: 1px #d3d3d3 solid;
   background: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   color: #4D5260;
   font-weight: 400;
   font-size: 9pt;
@@ -41,12 +40,14 @@ p:empty {
     height: 297mm;
   }
 
-  .page {
-    margin: 0;
-  }
   .bottom-page {
     position: fixed;
-    bottom: 5mm;
+    display: block;
+    bottom: 0;
+  }
+
+  .page {
+    border: none;
   }
 
 }
@@ -185,8 +186,8 @@ p:empty {
 .bottom-page {
   font-size: 11pt;
   font-weight: 600;
-  position: absolute;
+  position: fixed;
   width: 210mm;
+  display: none;
   text-align: center;
-  bottom: 5mm;
 }
